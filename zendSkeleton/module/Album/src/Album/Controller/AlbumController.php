@@ -9,13 +9,15 @@ class AlbumController extends AbstractActionController
     protected $albumTable ;  
     public function indexAction() //Album\Controller\AlbumController::indexAction
     {
-    
-        print_r($this->getAlbumTable()->getAlbum(1));
-        
+//         The ViewModel object also allows us to change the view script that is used, but the default is to use {controller name}/{action name}
+        return new ViewModel(array(
+            'albums' => $this->getAlbumTable()->fetchAll(), //to set variables in the view, we return a ViewModel instance where the first parameter of the constructor is an array from the action containing data we need. 
+        ));
     }
 
     public function addAction()
     {
+        
     }
 
     public function editAction()
