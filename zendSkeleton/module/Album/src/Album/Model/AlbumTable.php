@@ -1,4 +1,7 @@
 <?php
+/*
+ * This is the object mapper of the entity (album.php) 
+ */
 namespace Album\Model;
 
 use Zend\Db\TableGateway\TableGateway;

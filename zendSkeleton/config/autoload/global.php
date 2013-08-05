@@ -10,7 +10,7 @@
  * control, so do not include passwords or other sensitive information in this
  * file.
  */
-
+//<!--
 /**
  * we need to configure the ServiceManager so that it knows how to get a Zend\Db\Adapter\Adapter. 
  * This is done using a factory called Zend\Db\Adapter\AdapterServiceFactory which we can configure within the merged config system. 
@@ -20,7 +20,6 @@
  * You can use local.php (outside of the VCS) to store the credentials for your database if you want to. 
  * Modify config/autoload/global.php (in the Zend Skeleton root, not inside the Album module) 
  */
-
 return array(
     'db' => array(
         'driver'         => 'Pdo',

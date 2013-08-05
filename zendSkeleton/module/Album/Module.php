@@ -1,12 +1,13 @@
 <?php
 namespace Album ;
 
-// Use Service Manager to configure the table gateway and inject into the AlbumTable
+// <!-- Use Service Manager to configure the table gateway and inject into the AlbumTable
+// relates both, Album <==> AlbumTable :: entity with object mapper.
 use Album\Model\Album;
 use Album\Model\AlbumTable;
 use Zend\Db\ResultSet\ResultSet;
 use Zend\Db\TableGateway\TableGateway;
-//--
+//-!>
 
 
 class Module {
@@ -34,7 +35,7 @@ class Module {
      * 
      * We want to use the same instance of AlbumTable,
      * In OOP a factory is an abstraction of a constructor used to create an object; like a singleton which restricts the instatiantion of a class into one object.
-     * To do that, we must configure the Service Manager via conviguration where we define HOW we create one. (http://framework.zend.com/manual/2.2/en/modules/zend.service-manager.lazy-services.html)
+     * To do that, we must configure the Service Manager via configuration where we define HOW we create one. (http://framework.zend.com/manual/2.2/en/modules/zend.service-manager.lazy-services.html)
      * The method getServiceConfig is automatically called by the ModuleManager and applied to the ServiceManager
      * 
      * This method returns an array of factories that are all merged together by the ModuleManager before passing to the ServiceManager. 
@@ -43,6 +44,9 @@ class Module {
      * and using it to create a TableGateway object. The TableGateway is told to use an Album object whenever it creates a new result row. 
      * The TableGateway classes use the prototype pattern for creation of result sets and entities. This means that instead of instantiating when required, 
      * the system clones a previously instantiated object.
+     * 
+     * 
+     * getServiceConfig() links the entity Album.php with the mapping object AlbumTable.php
      */
      public function getServiceConfig()
     {
