@@ -7,7 +7,6 @@ return array(
         'DoctrineORMModule',
         'Application',
         'Album' ,
-        'User',
         'BasicSchema'
         //'DoctrineExp',
     ),
