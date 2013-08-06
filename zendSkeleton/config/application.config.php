@@ -2,8 +2,12 @@
 return array(
     // This should be an array of module namespaces used in the application.
     'modules' => array(
+        'ZendDeveloperTools', //http://marco-pivetta.com/doctrine-orm-zf2-tutorial/#/18
+        'DoctrineModule', 
+        'DoctrineORMModule',
         'Application',
-        'Album' 
+        'Album' ,
+//        'DoctrineExp',
     ),
 
     // These are various options for the listeners attached to the ModuleManager
