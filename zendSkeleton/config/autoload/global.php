@@ -34,5 +34,15 @@ return array(
                     => 'Zend\Db\Adapter\AdapterServiceFactory',
         ),
     ),
+    // DOCTRINE: USER, PASSWORD MUST GO ON LOCAL
+    'doctrine' => array(
+        'connection' => array(
+          'orm_default' => array(
+                'driverClass' =>'Doctrine\DBAL\Driver\PDOMySql\Driver',
+                'params' => array(
+                  'host'     => 'localhost',
+                  'port'     => '3306',
+                  'dbname'   => 'zf2tutorial',
+    ))))
 );
 
