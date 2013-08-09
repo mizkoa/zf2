@@ -1,10 +1,12 @@
 <?php
 /**
- * Description of User
+ * User_Message
+ * Table which relates Users and Messages - see the these two entities to check relations between them
  *
- * @author mario
+ * @author mrod
+ * 08.2013
  * 
- * ./vendor/bin/doctrine-module orm:schema-tool:update --force
+ * 
  */
 namespace User\Entity;
 use Doctrine\ORM\Mapping as ORM;
@@ -25,20 +27,38 @@ class User_Message {
     */    
     protected $id_message;
     
-    
+   /**
+    * 
+    * @return int
+    */ 
     public function getId(){
         return $this->id ;
     }
-    
+    /**
+     * 
+     * @return int
+     */
     public function getId_user(){
          return $this->id_user ;
     }
+    /**
+     * 
+     * @return int
+     */
     public function getId_message(){
         return $this->id_message ; 
     }
+    /**
+     * 
+     * @param int $idUser
+     */
     public function setId_user($idUser){
         $this->id_user = $idUser ;
     }
+    /**
+     * 
+     * @param string $idMessage
+     */
     public function setId_mesagge($idMessage){
         $this->id_message = $idMessage ; 
     }
