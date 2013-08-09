@@ -15,8 +15,8 @@ return array(
                 'options' => array(
                     'route'    => '/',
                     'defaults' => array(
-//                        'controller' => 'User\Controller\Index',
-                        'controller' => 'Application\Controller\Index',
+                        'controller' => 'User\Controller\Index',
+//                        'controller' => 'Application\Controller\Index',
 //                        'controller' => 'Album\Controller\Album',
                         'action'     => 'index', // ::indexAction()
                     ),

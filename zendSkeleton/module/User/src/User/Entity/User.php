@@ -45,6 +45,16 @@ class User {
     public function getFullName(){
         return $this->fullName ; 
     }
+    //
+    public function setNewUser(array $data = array()) {
+        foreach ($data as $key => $value) {
+            $this->{$key} = $value;
+        }
+    }
+    public function setNewMessage2TheUser(\User\Entity\Messages $message){
+        $this->messages[] = $message ; 
+    }
+    
 
 }
 

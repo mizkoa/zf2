@@ -10,16 +10,42 @@ return array(
     ),
     'router' => array( // <-- routes of this module are defined here
         'routes' => array(
-                'user' => array(
+                'user' => array( //<-- 'user' is the name to get the url using  $this->url('user', array(...));
                     'type'    => 'literal', // types in Zend/Mvc documentation - routing - : http://framework.zend.com/manual/2.0/en/modules/zend.mvc.routing.html
                     'options' => array(
-                        'route'    => '/user',
+                        'route'    => '/users',
                         'defaults' => array(
                             'controller' => 'User\Controller\Index',
                             'action'     => 'index',
                         ),
                     ),
                 ),
+                'user_add' => array( //<-- 
+                    'type'    => 'literal', // types in Zend/Mvc documentation - routing - : http://framework.zend.com/manual/2.0/en/modules/zend.mvc.routing.html
+                    'options' => array(
+                        'route'    => '/add',
+                        'defaults' => array(
+                            'controller' => 'User\Controller\Index',
+                            'action'     => 'add',
+                        ),
+                    ),
+                ),
+                'user_del' => array( //<-- 
+                        'type'    => 'segment', // types in Zend/Mvc documentation - routing - : http://framework.zend.com/manual/2.0/en/modules/zend.mvc.routing.html
+                        'options' => array(
+                            'route'    => '/delete/:id',
+                            'constraints' => array(
+                                'id'     => '[0-9]+',
+                            ),
+                            'defaults' => array(
+                                'controller' => 'User\Controller\Index',
+                                'action'     => 'delete',
+                            ),
+                        ),
+                    ),
+            /**/
+            
+            
             ),
         ),
     'view_manager' => array(),

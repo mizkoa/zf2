@@ -77,6 +77,12 @@ class Messages {
     {
         return $this->message;
     }
+    
+    public function setNewMessage(array $data = array()) {
+        foreach ($data as $key => $value) {
+            $this->{$key} = $value;
+        }
+    }
  
    
 }
