@@ -31,7 +31,7 @@ class IndexController extends AbstractActionController
      */
     public function getEntityManager(){
         if($this->em === null){
-            $this->em = $this->getServiceLocator()->get('Doctrine\ORM\EntityManager'); // same thing as $this->em = $this->getServiceLocator()->get('doctrine.entitymanager.orm_default');
+            $this->em = $this->getServiceLocator()->get('Doctrine\ORM\EntityManager'); // same thing as $this->em = $this->getServiceLocator()->get('doctrine.entitymanager.orm_default'); orm_default defined in autoload/global.php and autoload/local.php
         }
 
         return $this->em  ;
